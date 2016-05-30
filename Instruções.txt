@@ -1,0 +1,24 @@
+=>Para rodar:
+
+Coloque o arquivo de prolog dentro da pasta "prolog" dentro de Trab2IA\Trab2IA com o nome "Prolog.pl"
+
+=>Para configurar o visual studio:
+
+No sistema...
+Adicione 1 variavel de ambiente e modifique o Path já existente (em  system -> advanced system settings -> Environment Variables)
+passo a passo:
+-em System variables (o retangulo de baixo) clicar em New..
+	Variable name: SWI_HOME_DIR
+	Variable value: C:\Program Files\swipl
+-em System variables (o retangulo de baixo) clicar na variavel "Path" e em Edit.. 
+	em Variable value, ir para a ultima, acrescentar um ponto e virgula e logo apos: %SWI_HOME_DIR%\bin;
+
+No visual Studio...
+Em references do seu projeto, clique em add new reference (não adicionar com o nuget)
+procurar por "SwiPlCs.dll" na pasta de instalação do prolog e adicionar como referencia
+
+Selecione Solutions Platforms (onde provavelmente está escrito Any CPU) e selecione x64, se não tiver essa opção, clicar em configuration manager depois 
+clicar em Active solution platform e em <New...> e no primeiro retangulo escrever x64, 
+depois OK.
+
+

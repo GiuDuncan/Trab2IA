@@ -1,0 +1,52 @@
+Tabuleiro:
+lab 12x12
+saida posicao casa(12,1)
+
+Legenda:
+X	Saida
+d	Inimigo 20 Dano			
+D	Inimigo 50 Dano			
+P	Buraco			
+T	Teletransporter			
+O	Ouro/Tesouro			
+U	Power-up
+
+Inimigos:
+d - 2 caras - 100 energia inicial
+D - 2 caras - 100 energia inicial
+T - 4 caras - 100 energia inicial
+
+Obstaculos:
+8 poços - P
+3 ouros - O
+
+Agente:
+100 pontos de energia inicial
+municao limitada(?) dano 20 à 50 (random) 
+posicao inicial do agente: casa(12,1) virado pro norte
+
+Custo de energia:
+receber dano 	= - valor do dano
+morrer		= energia vai pra 0
+
+Custo: 
+mover_frente		= -1
+virar_direita		= -1
+pegar_objeto		= -1
+atirar				= -1
+subir (sair da cav)	= -1
+
+pegar				= +100 
+cair em um poco		= -1000
+ser morto			= -1000
+receber dano		= - valor do dano
+atirar				= - 10
+
+Sensores:
+
+do lado do inimigo 		- passos
+do lado do poço 		- brisa
+do lado do teleport 	- flash
+do lado do ouro 		- brilho 
+contra parede 			- impacto
+inimigo morre 			- grito
